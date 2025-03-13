@@ -1,11 +1,19 @@
+<!-- THIS README IS CREATED BY HidemaruOwO/MicroRepository -->
+<!-- SEE: https://github.com/HidemaruOwO/MicroRepository -->
+
 <!-- YOU SHOULD RUN THIS COMMAND IF YOU USING VIM -->
 <!-- :%s;HidemaruOwO/MyRepository;USERNAME/REPONAME;g -->
 
 # MyRepository 📚
 
+<!-- description -->
+
 A template that gathers the minimal structure of my repository.
 
 ## 🚀 Features
+
+<!-- write your apps features-->
+<!-- This "features" section assumes a generic REST API. Please modify it to fit your software. -->
 
 - SIMPLE REST API
 - COOK APPLE PIE
@@ -16,32 +24,56 @@ A template that gathers the minimal structure of my repository.
 brew install my-repository
 ```
 
+<!-- you should active this graphs if you using package manager -->
+
+<!-- | distribution         | command                         | -->
+<!-- | -------------------- | ------------------------------- | -->
+<!-- | Ubuntu               | `apt-get install <package>`     | -->
+<!-- | Debian               | `apt install <package>`         | -->
+<!-- | Arch Linux           | `pacman -S <package>`           | -->
+<!-- | Fedora               | `dnf install <package>`         | -->
+<!-- | CentOS               | `yum install <package>`         | -->
+<!-- | openSUSE             | `zypper install <package>`      | -->
+<!-- | Alpine Linux         | `apk add <package>`             | -->
+<!-- | Gentoo               | `emerge <package>`              | -->
+<!-- | NixOS                | `nix-env -iA nixpkgs.<package>` | -->
+<!-- | macOS                | `brew install <package>`        | -->
+<!-- | Windows (winget)     | `winget install <package>`      | -->
+<!-- | Windows (Chocolatey) | `choco install <package>`       | -->
+
 ### 🏗 Install from Source
 
 ```sh
 git clone https://github.com/HidemaruOwO/MyRepository.git
 cd MyRepository
 
+# build command (e.g: go build, cargo build, pnpm run build)
 make -j8
 
-install -Dm0755 -t "/usr/local/bin/" "dist/builded-binary"
+install -Dm0755 -t "dist/builded-binary" "/usr/local/bin/"
 ```
 
-- Arch Linux
+<!-- active there, if you have makepkg -->
 
-```sh
-git clone https://github.com/HidemaruOwO/MyRepository.git
-cd MyRepository
+<!-- - Arch Linux -->
 
-makepkg -si
-```
+<!-- ```sh -->
+<!-- git clone https://github.com/HidemaruOwO/MyRepository.git -->
+<!-- cd MyRepository -->
+
+<!-- makepkg -si -->
+<!-- ``` -->
 
 ## 🎯 Usage
+
+<!-- This "usage" section assumes a generic REST API. Please modify it to fit your software. -->
 
 ```bash
 # running local host 3000
 MyRepository
 ```
+
+<!-- using systemd -->
 
 - To run the service automatically, you can set it up with `systemd`:
 
