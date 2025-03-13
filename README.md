@@ -5,7 +5,7 @@ A template that gathers the minimal structure of my repository.
 ## 🚀 Features
 
 - Modern README
-- Multipull licenses: `Apache 2.0` and `SUSHI-WARE`
+- Multiple licenses: `Apache 2.0` and `SUSHI-WARE`
 
 <!-- ## 🛠 Installation -->
 
