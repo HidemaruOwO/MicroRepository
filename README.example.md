@@ -104,4 +104,6 @@ A reference to the latest license should be used, even if the attached license i
 
 ## 🤝 Reference
 
+This repository was created using the [MicroRepository](https://github.com/HidemaruOwO/MicroRepository) template.
+
 - [HidemaruOwO/MicroRepository](https://github.com/HidemaruOwO/MicroRepository)
