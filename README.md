@@ -53,7 +53,7 @@ sed -i '' 's;HidemaruOwO/MyRepository;USERNAME/REPONAME;g' README.md
 3. Edit credits in LICENSE and licenses/SUSHI-WARE.txt.
 
 > [!IMPORTANT]
-> If you don't change the credit in the license file, I will technically own the rights to your software.
+> If you don't change the credit in the license file, I will technically own the rights to your software. (LoL)
 
 ## 🌍 For contributer
 
