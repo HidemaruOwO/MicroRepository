@@ -4,8 +4,9 @@ A template that gathers the minimal structure of my repository.
 
 ## 🚀 Features
 
-- Modern README
+- Modern `README.md`
 - Multiple licenses: `Apache 2.0` and `SUSHI-WARE`
+- Modified `clinrules`
 
 <!-- ## 🛠 Installation -->
 
