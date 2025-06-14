@@ -4,19 +4,22 @@
 <!-- YOU SHOULD RUN THIS COMMAND IF YOU USING VIM -->
 <!-- :%s;HidemaruOwO/MyRepository;USERNAME/REPONAME;g -->
 
+<!-- UPDATE THE COPYRIGHT IN LICENSE  AND licelses/SUSHI-WARE.txt -->
+
 # MyRepository 📚
 
 <!-- description -->
 
-A template that gathers the minimal structure of my repository.
+A template that gathers the minimal structure of repository.
 
 ## 🚀 Features
 
 <!-- write your apps features-->
 <!-- This "features" section assumes a generic REST API. Please modify it to fit your software. -->
 
-- SIMPLE REST API
-- COOK APPLE PIE
+- Simple RESTful API
+- Completely new software
+- Cooking apple pie
 
 ## 🛠 Installation
 
