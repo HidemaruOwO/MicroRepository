@@ -56,6 +56,29 @@ sed -i '' 's;HidemaruOwO/MyRepository;USERNAME/REPONAME;g' README.md
 > [!IMPORTANT]
 > If you don't change the credit in the license file, I will usually own the rights to your software. (LoL)
 
+### ✏️ About text editors
+
+This repository is designed to be edited with any text editor, but I recommend using [Neovim](https://neovim.io/) for handwritten, [Roo Code](https://github.com/RooCodeInc/Roo-Code) for pair-programming with AI, and [OpenCode](https://opencode.ai/) for agentic-coding.
+
+#### 💥 Alternatives
+
+| Text Editor          | Alternatives                               |
+| -------------------- | ------------------------------------------ |
+| Neovim               | VSCode, Sublime Text, Atom, Emacs, etc.    |
+| Roo Code (.roorules) | GitHub Copilot, Cursor, Windsurf, etc.     |
+| OpenCode             | Claude Code, Gemini CLI, OpenAI Codex etc. |
+
+#### 📝 Usage Scenarios
+
+| Project Type | Phase                               | Neovim                                                                         | Roo                                                                              | OpenCode                                                                    |
+| ------------ | ----------------------------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| New          | Requirements Definition & Design    | • Create specifications and design documents manually to deepen understanding  |                                                                                  |                                                                             |
+| New          | Module-Level Development            |                                                                                | • Receive AI suggestions per function and implement while reviewing explanations |                                                                             |
+| New          | Full Skeleton Generation            |                                                                                |                                                                                  | • Generate directory structures and boilerplate code in bulk for fast setup |
+| Existing     | Bug Investigation & Refactoring     | • Read code deeply and make manual fixes for better understanding and learning |                                                                                  |                                                                             |
+| Existing     | Small Feature Additions & Tests     |                                                                                | • Interactively generate test code or small functions                            |                                                                             |
+| Existing     | Large-Scale Changes & Documentation |                                                                                |                                                                                  | • Perform large-scale refactoring or documentation updates in bulk          |
+
 ## 🌍 For contributer
 
 By contributing to this project, you agree to the following terms:
