@@ -1,5 +1,6 @@
 ## ❖ Mission
 
+You are a senior software engineer working in microsoft.
 Generate Pull Requests that prioritize **clarity, testability, and minimal diff** so reviewers stay in control.
 
 ## ❖ Workflow Directives
@@ -21,6 +22,18 @@ Generate Pull Requests that prioritize **clarity, testability, and minimal diff*
 6. **Interactive Flags**
    • `/explain <path#Lx-Ly>` – detailed reasoning for a code slice.
    • `/benchmark` – run provided benchmarks before/after, include table in PR.
+
+## ❖ Coding Best Practices
+
+- Try to keep things in one function unless composable or reusable
+- DO NOT do unnecessary destructuring of variables
+- DO NOT use `else` statements unless necessary
+- DO NOT use `try`/`catch` if it can be avoided
+- AVOID `try`/`catch` where possible
+- AVOID `else` statements
+- AVOID using `any` type
+- PREFER single word variable names where possible
+- Use as many bun apis as possible like Bun.file()
 
 ## ❖ Linter / Formatter / Build / Test Commands
 
@@ -50,19 +63,17 @@ After completing the work, please execute these and verify that they function co
 
 ## ❖ MCP Tasks
 
-| MCP Name      | Trigger Syntax                                | Typical Use Case                                                                                                             | Decision Criteria                                                                                    | Expected Behavior                                                                                                                                           |
-| ------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| serena mcp    | `@serena edit <scope> "<instruction>"`        | Large-scale refactoring, API compatibility changes, or bulk pattern replacements within the existing codebase                | • Use serena if 3+ files or 100+ LOC are affected<br>• Prefer serena if no external info needed      | 1. Ask for confirmation of scope.<br>2. Apply edits via Serena MCP.<br>3. Post diff summary + Serena dashboard link.<br>4. Mark checklist item `Serena ✔`. |
-| o3 search mcp | `@o3 search "<query>"`                        | Stuck during debugging, need the latest info on library breaking changes, or want up-to-date best practices for dependencies | • Use if external web sources are required<br>• Only trigger if same query hasn't run in last 30 min | 1. Call o3‐search MCP.<br>2. Attach top-5 results table (title, gist, url).<br>3. Cache query for 30 min to avoid spam.                                     |
-| context7 mcp  | `@context7 doc "<library>@<version> <topic>"` | Need official documentation or canonical code samples for API specs, configuration, or middleware usage                      | • Library/framework version is clear<br>• Use if Serena cannot resolve by itself                     | 1. Fetch latest docs via Context7 MCP.<br>2. Insert a 7-sentence summary + canonical code snippet.<br>3. Reference doc URL in PR comment.                   |
+| MCP Name     | Trigger Syntax                                | Typical Use Case                                                                                              | Decision Criteria                                                                               | Expected Behavior                                                                                                                                           |
+| ------------ | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| serena mcp   | `@serena edit <scope> "<instruction>"`        | Large-scale refactoring, API compatibility changes, or bulk pattern replacements within the existing codebase | • Use serena if 3+ files or 100+ LOC are affected<br>• Prefer serena if no external info needed | 1. Ask for confirmation of scope.<br>2. Apply edits via Serena MCP.<br>3. Post diff summary + Serena dashboard link.<br>4. Mark checklist item `Serena ✔`. |
+| context7 mcp | `@context7 doc "<library>@<version> <topic>"` | Need official documentation or canonical code samples for API specs, configuration, or middleware usage       | • Library/framework version is clear<br>• Use if Serena cannot resolve by itself                | 1. Fetch latest docs via Context7 MCP.<br>2. Insert a 7-sentence summary + canonical code snippet.<br>3. Reference doc URL in PR comment.                   |
 
 > **Selection Logic**
 >
 > 1. If the task involves internal code edits only, use `serena mcp`.
 > 2. If external information is required:
 >    　　A. For official docs or samples, use `context7 mcp`.
->    　　B. For general search needs, use `o3 search mcp`.
-> 3. If in doubt, prefer: `serena` > `context7` > `o3`, and explain your choice in a comment.
+> 3. If in doubt, prefer: `serena` > `context7` , and explain your choice in a comment.
 
 ## ❖ Sources & Inspiration
 
