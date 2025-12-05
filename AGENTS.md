@@ -26,6 +26,7 @@ Talk to the user in natural Japanese.
 - Avoid `any` type.
 - Use short, descriptive variable names.
 - Prefer Bun APIs when applicable (e.g., `Bun.file()`).
+- Use consola when logging (e.g., `consola.log()`)
 
 ## Commands
 
@@ -33,23 +34,6 @@ Talk to the user in natural Japanese.
 - Formatter: `bun x prettier --write .`
 - Build: `bun build`
 - Test: `bun test`
-
-- Keep functions small and focused; prefer early returns over deep nesting.
-- Handle errors explicitly; avoid `panic` except for initialization or truly unrecoverable errors.
-- Prefer concrete types or generics over `any` / `interface{}`.
-- Prefer the Go standard library (`os`, `io`, `context`, `net/http`, `encoding/*`, etc.).
-- Pass `context.Context` as the first parameter when cancellation or timeout is needed.
-- Use proper synchronization (`sync.Mutex`, `sync.WaitGroup`, channels) for shared state.
-- Add comments for all exported symbols, starting with the identifier name.
-- Wrap errors with `%w` and propagate them.
-- Prefer structured logging (e.g. `log/slog`).
-
-## Commands
-
-- Linter: `golangci-lint run --issues-exit-code=1`
-- Formatter: `gofmt -s -w . && goimports -w .`
-- Build: `go build ./...`
-- Test: `go test -race -cover ./...`
 
 ## Branch Naming
 
