@@ -1,19 +1,23 @@
 **LANGUAGE**: Japanese (日本語)
 
+You are an AI pair programmer for a Go project.
+Talk to the user in natural Japanese.
+
 ## Workflow
 
-1. Plan First
-   - Create and tell me your plan and wait for “approve plan” I says. And call `plan tools mcp` built in OpenCode or codex or claude code if user says "approve".
-2. Branching
-   - From `main`: `feature/<short>` or `fix/<short>` ..etc (Refer `Branch Naming` section).
-3. Tests
-   - Add/update unit tests in `tests/` for every non-trivial function.
-   - If tests fail, reject your PR (`/abort`).
-4. Quality
-   - Run linters/formatters and commit resulting fixes.
-   - Run build and tests locally before pushing.
+1. Always propose a short plan first.
+   - Explain the steps you will take.
+   - Wait until the user writes "approve plan" before doing changes.
 
-## (IMPORTANT) Coding Best Practices
+2. Branching
+   - Work on a branch from `develop` such as `feature/<short>` or `fix/<short>` (see "Branch Naming").
+
+3. Tests and Quality
+   - For every non-trivial change, add or update unit tests in the best-practice Go location.
+   - Run: lint, format, build, and tests locally.
+   - If tests fail, stop and report the failure instead of continuing.
+
+## (IMORTANT) Coding Best Practices (Bun.js)
 
 - Keep logic in one function unless splitting improves reuse or clarity.
 - Avoid unnecessary destructuring.
@@ -30,6 +34,23 @@
 - Build: `bun build`
 - Test: `bun test`
 
+- Keep functions small and focused; prefer early returns over deep nesting.
+- Handle errors explicitly; avoid `panic` except for initialization or truly unrecoverable errors.
+- Prefer concrete types or generics over `any` / `interface{}`.
+- Prefer the Go standard library (`os`, `io`, `context`, `net/http`, `encoding/*`, etc.).
+- Pass `context.Context` as the first parameter when cancellation or timeout is needed.
+- Use proper synchronization (`sync.Mutex`, `sync.WaitGroup`, channels) for shared state.
+- Add comments for all exported symbols, starting with the identifier name.
+- Wrap errors with `%w` and propagate them.
+- Prefer structured logging (e.g. `log/slog`).
+
+## Commands
+
+- Linter: `golangci-lint run --issues-exit-code=1`
+- Formatter: `gofmt -s -w . && goimports -w .`
+- Build: `go build ./...`
+- Test: `go test -race -cover ./...`
+
 ## Branch Naming
 
 - feature: new feature
@@ -39,23 +60,8 @@
 - test: adding/updating tests
 - chore: build process or auxiliary tools
 
-## Review Checklist
+## MCP usage
 
-- [ ] Plan approved
-- [ ] New branch from `main`
-- [ ] One feature/bug-fix
-- [ ] Tests added/updated
-- [ ] Lint/format pass
-- [ ] Build/test pass
-- [ ] Docs updated if needed
-
-## MCP (Optional)
-
-- `@context7 doc "<lib>@<ver> <topic>"` — fetch latest docs. In answers, include
-  a 7-sentence summary, a minimal canonical snippet, and the official URL. See
-  “System Prompt Defaults” for when to use.
-  Always use context7 when to generation codes, setup or configuration steps, or
-  library/API documentation. This means you should automatically use the Context7 MCP
-  tools to resolve library id and get library docs without me having to explicitly ask.
-- `@fetch url` - supply `url` (with optional `headers`);
-  When ask have urls, always use `@fetch` MCP tool to get the content of the url and use it to answer.
+- When you need library/API docs or setup instructions, use Context7 MCP to fetch docs and include:
+  a short summary, a minimal canonical code snippet, and the official URL.
+- When the user gives URLs, use `@fetch` to get the content and base your answer on it.
