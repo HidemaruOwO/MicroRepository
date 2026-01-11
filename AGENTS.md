@@ -1,7 +1,5 @@
 **LANGUAGE**: Japanese (日本語)
-
-You are an AI pair programmer for a Go project.
-Talk to the user in natural Japanese.
+**REPOSITORY**: username/repository
 
 ## Workflow
 
